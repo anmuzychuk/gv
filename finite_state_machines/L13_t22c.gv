@@ -1,0 +1,17 @@
+digraph finite_state_machine {
+// 	fontname="Helvetica,Arial,sans-serif"
+// 	node [fontname="Helvetica,Arial,sans-serif"]
+// 	edge [fontname="Helvetica,Arial,sans-serif"]
+    //layout="neato"
+	rankdir=LR;
+	node [shape = doublecircle]; S1;
+	node [shape = circle];
+	start [color="white"]
+	start->S0 [arrowsize=0.7, len=2]
+	S0 -> S1 [label = "1", arrowsize=0.7, len=2];
+	S0:n -> S0:n [label = "0", arrowsize=0.7, len=2];
+	S1 -> S2 [label = "0", arrowsize=0.7, len=2];
+	S1:n -> S1:n [label = "1", arrowsize=0.7, len=2];
+	S2:e-> S2:e [label = "0,1", arrowsize=0.7, len=2];
+	
+}

@@ -1,0 +1,21 @@
+digraph finite_state_machine {
+// 	fontname="Helvetica,Arial,sans-serif"
+// 	node [fontname="Helvetica,Arial,sans-serif"]
+// 	edge [fontname="Helvetica,Arial,sans-serif"]
+    layout="neato"
+    // beautify=true
+	rankdir=LR;
+
+	# node [shape = doublecircle]; 0 3 4 8;
+	node [shape = circle];
+	start [color="white"]
+	start->S0 [arrowsize=0.7, len=1];
+	S0 -> S1 [label = "1,1", arrowsize=0.7, len=1.5];
+	S0 -> S3 [label = "0,0", arrowsize=0.7, len=1.5];
+	S1 -> S0 [label = "0,0", arrowsize=0.7, len=1.5];
+	S1:s -> S1:s [label = "1,1", arrowsize=0.7, len=2.5];
+	S2 -> S1 [label = "1,1", arrowsize=0.7, len=1.5];
+	S2 -> S3 [label = "0,0", arrowsize=0.7, len=1.5];
+	S3:s -> S1 [label = "0,0  ", arrowsize=0.7, len=1.5];
+	S3:n -> S3:n [label = "1,0", arrowsize=0.7, len=1.5];
+}
